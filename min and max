@@ -1,0 +1,25 @@
+
+class Compute 
+{
+    static pair getMinMax(long a[], long n)  
+    {
+        //Write your code here
+        long tempmin=a[0];
+        long tempmax=a[0];
+        
+        for(int i=0;i<n;i++){
+            if(a[i]>tempmax){
+                tempmax=a[i];
+            }
+            if(a[i]<tempmin){
+                tempmin=a[i];
+            }
+        
+        }
+        
+        return new pair(tempmin,tempmax);
+       
+        
+    
+    }
+}
