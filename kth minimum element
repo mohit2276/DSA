@@ -1,0 +1,5 @@
+int n = sizeof(arr);
+       sort(arr,arr+r+1);
+       
+       int ans = arr[k-1];
+       return ans;
