@@ -1,0 +1,40 @@
+class Solution{
+
+    // arr: input array
+    // n: size of array
+    //Function to find the sum of contiguous subarray with maximum sum.
+    long maxSubarraySum(int arr[], int n){
+        int flag = 0;
+        for(int ele : arr){
+            if(ele > 0){
+                flag = 1;
+                break;
+            }}
+            
+            if(flag !=1){
+                int min = arr[0];
+                for(int ele:arr){
+                    if(ele > min){
+                        min = ele;
+                    }
+                }
+                return min;
+            }
+            
+        
+        // Your code here
+        int csum=0;
+        int maxsum=0;
+        for(int i=0;i<n;i++){
+            csum=csum+arr[i];
+            if(csum>maxsum){
+                maxsum=csum;
+            }
+            if(csum<0){
+                csum=0;
+            }
+        }
+        return maxsum;
+    }
+    
+}
