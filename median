@@ -1,0 +1,23 @@
+class Solution
+{
+    public int find_median(int[] v)
+    {
+        // Code here
+        int n=v.length;
+        double median;
+        Arrays.sort(v);
+        if((n%2==0)){
+            int sum=v[n/2]+v[n/2-1];
+            median= ((double) (sum)/2);
+            
+            
+        }
+        else{
+            median = v[n/2];
+        }
+         return ((int) median); 
+            
+            
+            
+        }
+    }
