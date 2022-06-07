@@ -10,6 +10,7 @@ class Solution {
             sum=sum+last;
         }
        
+       
         return (product-sum);
         
     }
