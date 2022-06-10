@@ -3,5 +3,6 @@ class Solution {
        s = s.trim();
         return s.length() - s.lastIndexOf(" ") - 1; 
         
+        
     }
 }
