@@ -6,6 +6,7 @@ class Solution {
 
         /*
         * If the needle string is empty, return 0
+        
         * */
         if(needle.equals("")){
             return 0;
