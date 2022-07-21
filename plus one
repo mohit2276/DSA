@@ -1,0 +1,24 @@
+class Solution {
+    public int[] plusOne(int[] digit) {
+        int n=digit.length-1;
+        while(n>=0){
+            if(digit[n]==9){
+                digit[n]=0;
+            }
+            else{
+                digit[n]+=1;
+                return digit;
+            }
+            n--;
+            
+        }
+        int[] resul= new int[digit.length+1];
+        resul[0]=1;
+        return resul;
+        
+            
+        
+        
+        
+    }
+}
