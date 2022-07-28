@@ -1,0 +1,109 @@
+
+public class Main
+{
+    //node class which represent every single node of a tree
+    static class Node{
+        int data;
+        Node left;
+        Node right;
+        
+        Node(int data){
+            this.data=data;
+            this.left=null;
+            this.right=null;
+            
+        }
+    }
+    
+    static class BinaryTree{
+        //this will call bcz it will traverse till end
+        static int idx=-1;
+        //it takes all nodes and return our root node
+        public static Node buildTree(int nodes[]){
+            //when function call index will Update 
+            idx++;
+            //read data
+            if(nodes[idx]==-1){
+                return null;
+            }
+            //create new node
+            Node newNode= new Node(nodes[idx]);
+            newNode.left=buildTree(nodes);
+            newNode.right=buildTree(nodes);
+            
+            
+            return newNode;
+            
+            
+            
+        }
+    }
+    //preorder traversal 
+    public static void preorder(Node root){
+        // checking if the value not found then we just only return back to the Node
+        
+        if(root==null){
+            return ;
+        }
+        System.out.print(root.data+" ");
+        preorder(root.left);
+        preorder(root.right);
+        
+        
+        
+    }
+    
+    //Inorder traversal
+    public static void inorder(Node root){
+        if(root==null){
+            return;
+        }
+        
+        inorder(root.left);
+        System.out.print(root.data+" ");
+        inorder(root.right);
+    }
+    
+    //postorder traversal
+    public static void postorder(Node root){
+        if(root==null){
+            return;
+            
+        }
+        postorder(root.left);
+        postorder(root.right);
+        System.out.print(root.data+" ");
+        
+    }
+    
+	public static void main(String[] args) {
+	    int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+	    BinaryTree tree= new BinaryTree();
+	    
+	    Node root=tree.buildTree(nodes);
+	    
+	    System.out.print("preorder traversal = ");
+	    preorder(root);
+	    
+	    System.out.print("\nInorder traversal = ");
+	    inorder(root);
+	    
+	    
+	    System.out.print("\nPostorder traversa4 = ");
+	    postorder(root);
+	    
+	    
+	    
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
