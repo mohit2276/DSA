@@ -1,0 +1,21 @@
+class Solution {
+    public boolean isIsomorphic(String s, String t) {
+        char[] app=new char[257];
+        boolean[] arr= new boolean[257];
+        char[] sss= s.toCharArray();
+        char[] ttt=t.toCharArray();
+        for(int i=0;i<sss.length;i++){
+            if(app[ttt[i]]==0 && arr[sss[i]]==false){
+                app[ttt[i]]=sss[i];
+                arr[sss[i]]=true;
+                
+            }
+            else if(app[ttt[i]]!=sss[i]){
+                return false;
+            }
+        }
+        
+        return true;
+        
+    }
+}
