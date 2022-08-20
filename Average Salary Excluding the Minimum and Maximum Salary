@@ -12,6 +12,8 @@ class Solution {
             
             
             
+            
+            
         }
         avg=(sum)/(n-2);
         return avg; 
