@@ -1,0 +1,19 @@
+            int res=Integer.MAX_VALUE;
+            int sum=0;
+        
+        
+        for(int i:a){
+            
+                
+                sum=sum+i;
+                
+                res=Math.min(res,sum);
+                if(sum>0){
+                    sum=0;
+                }
+            }
+        
+        return res;
+        
+    }
+}
