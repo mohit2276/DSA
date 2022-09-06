@@ -1,0 +1,28 @@
+   if(n==1){
+            return 1;
+        }
+        
+        int left=0;
+        int right=arr.length-1;
+        long leftsum=arr[0];
+        long rightsum=arr[arr.length-1];
+        while(left<right){
+            if(leftsum<rightsum){
+                left++;
+                leftsum=leftsum+arr[left];
+            }
+            else{
+                right--;
+                rightsum=rightsum+arr[right];
+            }
+            
+            
+            
+        }
+        
+        if(leftsum==rightsum){
+            return ++left;
+        }
+        else{
+            return -1;
+        }
