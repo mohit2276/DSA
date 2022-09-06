@@ -4,6 +4,7 @@ class Solution {
         int maxxx=0;
         for(int i=0;i<size;i++){
             String[] array=sentences[i].split(" ");
+            
             maxxx=Math.max(maxxx,array.length);
                 
         }
